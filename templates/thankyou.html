@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response Submitted</title>
+    <link rel="stylesheet" href="{% static 'playground/css/thankyou.css' %}">
+
+      {% include "nav.html" %}
+</head>
+<body>
+     <div class="decorative-elements">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+    </div>
+      {% include "footer.html" %}
+    <div class="container">
+        <div class="checkmark"></div>
+        <h1>Response Submitted!</h1>
+        <p>Thank you for your submission. We've received your response and will review it shortly. You'll hear back from us soon.</p>
+        <a href="#" class="home-button" onclick="goHome()">Go Back to Home</a>
+    </div>
+    <br>
+    <br>
+    
+    <script>
+        function goHome() {
+            // In a real application, this would navigate to the actual home page
+            // For demo purposes, we'll just show an alert
+            alert('Redirecting to home page...');
+            // window.location.href = '/';
+        }
+    </script>
+   
+</body>
+ 
+
+</html>

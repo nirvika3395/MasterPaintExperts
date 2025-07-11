@@ -1,0 +1,242 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <title> About - MasterPaintExperts</title>
+     <link rel="stylesheet" href="{% static 'playground/css/about.css' %}">
+
+
+   <body>
+   {% include "nav.html" %}
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <body>
+    <div class="reviews-container">
+        <div class="section-header">
+            <h2>What Our Customers Say</h2>
+            <p>Over 500+ satisfied customers trust us for their interior, exterior, and commercial painting needs</p>
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterReviews('all')">All Reviews</button>
+            <button class="filter-btn" onclick="filterReviews('interior')">Interior</button>
+            <button class="filter-btn" onclick="filterReviews('exterior')">Exterior</button>
+            <button class="filter-btn" onclick="filterReviews('commercial')">Commercial</button>
+        </div>
+
+        <div class="reviews-grid" id="reviewsGrid">
+            <!-- Review cards will be populated by JavaScript -->
+        </div>
+
+        <div class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">4.9</span>
+                    <span class="stat-label">Average Rating</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Customer Satisfaction</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Customer Support</span>
+                </div>
+            </div>
+        </div>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <div class="story-container">
+        <div class="story-content">
+            <div class="story-left">
+                <h2 class="section-title">Our Story</h2>
+                <div class="story-text">
+                    <p>Master Paints was founded on a simple yet powerful principle: <span class="highlight">exceptional craftsmanship delivered with unwavering dedication</span>. Our journey began over 20 years ago when our founder picked up their first professional brush, driven by a passion for transforming ordinary spaces into extraordinary works of art.</p>
+                    <p>With <span class="highlight">more than two decades of hands-on experience</span>, we've perfected our craft through countless residential and commercial projects. Every stroke of the brush represents years of refined technique, attention to detail, and commitment to excellence that only comes from true mastery of the trade.</p>
+                    <p>What started as a one-person operation has evolved into a trusted name in professional painting services, built on the foundation of quality work, honest pricing, and customer satisfaction that has earned us referrals and repeat clients year after year.</p>
+                </div>
+            </div>
+            <div class="story-right">
+                <img src="../resources/logo.png"alt="Professional painter working on interior wall" class="story-image">
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <br>
+    <br>
+
+
+    <!-- FOOTER -->
+   {% include "footer.html" %}
+
+
+    <script>
+        const reviews = [
+            {
+                name: "Sarah Johnson",
+                type: "interior",
+                rating: 5,
+                text: "Absolutely amazing work! They transformed our living room and kitchen with beautiful colors. The team was professional, clean, and finished on time. I couldn't be happier with the results!",
+                date: "2 weeks ago",
+                project: "Living Room & Kitchen Repaint"
+            },
+            {
+                name: "Mike Chen",
+                type: "exterior",
+                rating: 5,
+                text: "Outstanding exterior painting job! They power washed, primed, and painted our entire house. The attention to detail was incredible, and the paint job looks flawless even after the recent storms.",
+                date: "1 month ago",
+                project: "Full House Exterior"
+            },
+            {
+                name: "David Martinez",
+                type: "commercial",
+                rating: 5,
+                text: "We hired them for our office building renovation. They worked efficiently during off-hours and delivered exceptional results. Professional, reliable, and great value for money.",
+                date: "3 weeks ago",
+                project: "Office Building Renovation"
+            },
+            {
+                name: "Emily Watson",
+                type: "interior",
+                rating: 5,
+                text: "They painted our entire home interior including trim work. The craftsmanship is superb! They helped us choose the perfect colors and the finish is absolutely beautiful.",
+                date: "1 week ago",
+                project: "Whole Home Interior"
+            },
+            {
+                name: "Robert Kim",
+                type: "exterior",
+                rating: 5,
+                text: "Excellent exterior painting service! They replaced some rotted wood, caulked everything properly, and the paint job looks fantastic. Very thorough and professional team.",
+                date: "2 months ago",
+                project: "Exterior Siding & Trim"
+            },
+            {
+                name: "Lisa Thompson",
+                type: "commercial",
+                rating: 5,
+                text: "Perfect for our restaurant renovation! They worked quickly and efficiently, matching our brand colors perfectly. The space looks amazing and customers love the new look.",
+                date: "1 month ago",
+                project: "Restaurant Interior"
+            },
+            {
+                name: "James Wilson",
+                type: "interior",
+                rating: 4,
+                text: "Great job on our bedroom and bathroom painting. The team was courteous and cleaned up perfectly after each day. Small delay due to weather but overall very satisfied.",
+                date: "3 weeks ago",
+                project: "Bedroom & Bathroom"
+            },
+            {
+                name: "Maria Rodriguez",
+                type: "exterior",
+                rating: 5,
+                text: "They did an incredible job on our deck staining and house touch-ups. The color matching was perfect and they protected all our landscaping. Highly recommended!",
+                date: "2 weeks ago",
+                project: "Deck & Exterior Touch-ups"
+            },
+            {
+                name: "Tom Anderson",
+                type: "commercial",
+                rating: 5,
+                text: "Painted our warehouse facility over the weekend. Minimal disruption to our operations and the quality is excellent. Professional crew that delivered exactly what was promised.",
+                date: "1 month ago",
+                project: "Warehouse Facility"
+            }
+        ];
+
+        function getInitials(name) {
+            return name.split(' ').map(word => word[0]).join('');
+        }
+
+        function generateStars(rating) {
+            let stars = '';
+            for (let i = 0; i < 5; i++) {
+                stars += `<span class="star">${i < rating ? '★' : '☆'}</span>`;
+            }
+            return stars;
+        }
+
+        function createReviewCard(review) {
+            return `
+                <div class="review-card" data-type="${review.type}">
+                    <div class="review-header">
+                        <div class="avatar">${getInitials(review.name)}</div>
+                        <div class="reviewer-info">
+                            <h4>${review.name}</h4>
+                            <span class="project-type ${review.type}">${review.type.charAt(0).toUpperCase() + review.type.slice(1)} Project</span>
+                        </div>
+                    </div>
+                    <div class="stars">${generateStars(review.rating)}</div>
+                    <p class="review-text">"${review.text}"</p>
+                    <div class="review-date">${review.date} • ${review.project}</div>
+                </div>
+            `;
+        }
+
+        function displayReviews(reviewsToShow = reviews) {
+            const reviewsGrid = document.getElementById('reviewsGrid');
+            reviewsGrid.innerHTML = reviewsToShow.map(review => createReviewCard(review)).join('');
+        }
+
+        function filterReviews(type) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const filteredReviews = type === 'all' ? reviews : reviews.filter(review => review.type === type);
+            displayReviews(filteredReviews);
+        }
+
+        function writeReview() {
+            alert('Thank you for your interest! Our review form will open in a new window where you can share your experience with our painting services.');
+        }
+
+        // Initialize the reviews display
+        displayReviews();
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all review cards
+        setTimeout(() => {
+            const reviewCards = document.querySelectorAll('.review-card');
+            reviewCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        }, 100);
+    </script>
+</body>
+
+   
+
+    
+</html>

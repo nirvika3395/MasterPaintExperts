@@ -1,0 +1,265 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conatct - MasterPaintExperts</title>
+    <link rel="stylesheet" href="{% static 'playground/css/contact.css' %}">
+
+
+</head>
+<body>
+     {% include "nav.html" %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="header">
+            <h1>Get Your Free Quote Today</h1>
+            <p>Professional painting services for residential and commercial properties</p>
+        </div>
+
+        <div class="content">
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <strong>Phone</strong><br>
+                         Matt  - 0424 182 411  |
+                         Gam – 0449 658 944
+
+
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div>
+                        <strong>Email</strong><br>
+                        masterpainting@gmail.com.au
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <strong>Address</strong><br>
+                        24 King street, Doncaster east 3109 Vic
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">🕐</div>
+                    <div>
+                        <strong>Business Hours</strong><br>
+                        7 days a week <br> 8:00 am to 4:00 pm
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Request a Quote</h2>
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Property Address *</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="propertyType">Property Type *</label>
+                        <select id="propertyType" name="propertyType" required>
+                            <option value="">Select Property Type</option>
+                            <option value="residential">Residential</option>
+                            <option value="commercial">Commercial</option>
+                            <option value="industrial">Industrial</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Services Needed * (Select all that apply)</label>
+                        <div class="service-options">
+                            <div class="service-option">
+                                <input type="checkbox" id="interior" name="services" value="interior">
+                                <label for="interior">Interior Painting</label>
+                            </div>
+                            <div class="service-option">
+                                <input type="checkbox" id="exterior" name="services" value="exterior">
+                                <label for="exterior">Exterior Painting</label>
+                            </div>
+                            <div class="service-option">
+                                <input type="checkbox" id="wallpaper" name="services" value="wallpaper">
+                                <label for="wallpaper">Wallpaper Installation</label>
+                            </div>
+                            <div class="service-option">
+                                <input type="checkbox" id="deck" name="services" value="deck">
+                                <label for="deck">Deck Staining</label>
+                            </div>
+                            <div class="service-option">
+                                <input type="checkbox" id="cabinet" name="services" value="cabinet">
+                                <label for="cabinet">Cabinet Refinishing</label>
+                            </div>
+                            <div class="service-option">
+                                <input type="checkbox" id="drywall" name="services" value="drywall">
+                                <label for="drywall">Drywall Repair</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="projectSize">Project Size</label>
+                        <select id="projectSize" name="projectSize">
+                            <option value="">Select Project Size</option>
+                            <option value="small">Small (1-2 rooms)</option>
+                            <option value="medium">Medium (3-5 rooms)</option>
+                            <option value="large">Large (Whole house)</option>
+                            <option value="commercial">Commercial Property</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="timeline">Preferred Timeline</label>
+                        <select id="timeline" name="timeline">
+                            <option value="">Select Timeline</option>
+                            <option value="asap">ASAP</option>
+                            <option value="1-2weeks">1-2 weeks</option>
+                            <option value="1month">Within 1 month</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">Budget Range</label>
+                        <select id="budget" name="budget">
+                            <option value="">Select Budget Range</option>
+                            <option value="under1000">Under $1,000</option>
+                            <option value="1000-2500">$1,000 - $2,500</option>
+                            <option value="2500-5000">$2,500 - $5,000</option>
+                            <option value="5000-10000">$5,000 - $10,000</option>
+                            <option value="over10000">Over $10,000</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Additional Details</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us more about your project, color preferences, or any special requirements..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Quote Request</button>
+                </form>
+
+                <div id="successMessage" class="success-message">
+                    <strong>Thank you for your inquiry!</strong><br>
+                    We've received your quote request and will contact you within 24 hours to discuss your project.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const services = [];
+            const serviceCheckboxes = document.querySelectorAll('input[name="services"]:checked');
+            serviceCheckboxes.forEach(checkbox => {
+                services.push(checkbox.value);
+            });
+            
+            // Validate that at least one service is selected
+            if (services.length === 0) {
+                alert('Please select at least one service.');
+                return;
+            }
+            
+            // Simulate form submission
+            const submitBtn = document.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                // Hide form and show success message
+                document.getElementById('contactForm').style.display = 'none';
+                document.getElementById('successMessage').style.display = 'block';
+                
+                // Log form data (in a real application, this would be sent to a server)
+                console.log('Form submitted with data:', {
+                    firstName: formData.get('firstName'),
+                    lastName: formData.get('lastName'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    address: formData.get('address'),
+                    propertyType: formData.get('propertyType'),
+                    services: services,
+                    projectSize: formData.get('projectSize'),
+                    timeline: formData.get('timeline'),
+                    budget: formData.get('budget'),
+                    message: formData.get('message')
+                });
+                
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 1500);
+        });
+
+        // Add floating animation to contact items
+        const contactItems = document.querySelectorAll('.contact-item');
+        contactItems.forEach((item, index) => {
+            item.style.animationDelay = `${index * 0.1}s`;
+            item.style.animation = 'fadeInUp 0.6s ease forwards';
+        });
+
+        // Add CSS animation keyframes
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+       
+    </script>
+</body>
+
+
+</html>

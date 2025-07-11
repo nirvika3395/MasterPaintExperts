@@ -1,0 +1,410 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <title>Tips - MasterPaintExperts</title>
+    <link rel="stylesheet" href="{% static 'playground/css/paint.css' %}">
+
+
+   <body>
+    {% include "nav.html" %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <body>
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <header>
+        <div class="container">
+            <h1>🎨 Painting Tips</h1>
+            <p>What we follow and recommend for good quality painting. Contact us for best results</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <a href="#techniques" class="nav-item">Basic Techniques</a>
+                <a href="#preparation" class="nav-item">Preparation</a>
+                <a href="#application" class="nav-item">Application Tips</a>
+                <a href="#color" class="nav-item">Color & Coverage</a>
+                <a href="#problems" class="nav-item">Problem Solving</a>
+                <a href="#tools" class="nav-item">Tool Care</a>
+                <a href="#safety" class="nav-item">Safety</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section id="techniques" class="section">
+                <h2>Basic Techniques</h2>
+                
+                <h3>Brush Techniques</h3>
+                <p>Master these fundamental brush techniques for professional results:</p>
+                <ul>
+                    <li><span class="highlight">Load & Dip</span> - Dip brush 1/3 into paint, tap gently on can rim</li>
+                    <li><span class="highlight">Cutting In</span> - Use angled brush for precise edges around trim</li>
+                    <li><span class="highlight">Long Strokes</span> - Maintain consistent pressure for smooth finish</li>
+                    <li><span class="highlight">Feathering</span> - Blend brush marks with light, overlapping strokes</li>
+                </ul>
+
+                <h3>Rolling Techniques</h3>
+                <p>Achieve even coverage with proper rolling methods:</p>
+                <ul>
+                    <li><span class="highlight">W Pattern</span> - Roll in W or M pattern, then fill in</li>
+                    <li><span class="highlight">Maintain Wet Edge</span> - Work in 4x4 foot sections</li>
+                    <li><span class="highlight">Even Pressure</span> - Apply consistent pressure throughout stroke</li>
+                    <li><span class="highlight">Back-Rolling</span> - Go over with light strokes to eliminate texture</li>
+                </ul>
+
+                <div class="tip-box">
+                    <strong>Pro Tip:</strong> Always work from dry areas into wet paint to avoid lap marks and ensure seamless coverage.
+                </div>
+            </section>
+
+            <section id="preparation" class="section">
+                <h2>Surface Preparation</h2>
+                
+                <h3>Cleaning</h3>
+                <p>Proper surface preparation is crucial for long-lasting results:</p>
+                <ul>
+                    <li>Remove dirt, grease, and grime with TSP or degreasing cleaner</li>
+                    <li>Allow surfaces to dry completely before proceeding</li>
+                    <li>Vacuum or dust all surfaces to remove loose particles</li>
+                </ul>
+
+                <h3>Sanding</h3>
+                <p>Smooth surfaces ensure better paint adhesion:</p>
+                <ul>
+                    <li><span class="highlight">220-grit</span> sandpaper for most surfaces</li>
+                    <li><span class="highlight">120-grit</span> for rough or glossy surfaces</li>
+                    <li>Sand lightly in circular motions</li>
+                    <li>Wipe clean with tack cloth after sanding</li>
+                </ul>
+
+                <h3>Priming</h3>
+                <p>Choose the right primer for your surface:</p>
+                <ul>
+                    <li><span class="highlight">Latex Primer</span> - For most interior walls</li>
+                    <li><span class="highlight">Oil-Based Primer</span> - For wood and metal</li>
+                    <li><span class="highlight">Stain-Blocking Primer</span> - For water stains or knots</li>
+                </ul>
+
+                <div class="tip-box">
+                    <strong>Remember:</strong> Skipping primer may save time initially, but it often leads to poor coverage and color bleeding.
+                </div>
+            </section>
+
+            <section id="application" class="section">
+                <h2>Application Tips</h2>
+                
+                <h3>Loading Your Tools</h3>
+                <p>Proper paint loading ensures consistent application:</p>
+                <ul>
+                    <li>Brushes: Load 1/3 of bristles, tap excess on can rim</li>
+                    <li>Rollers: Roll in tray well, remove excess on textured area</li>
+                    <li>Sprayers: Maintain consistent distance and speed</li>
+                </ul>
+
+                <h3>Application Order</h3>
+                <p>Follow this sequence for best results:</p>
+                <ul>
+                    <li>1. <span class="highlight">Ceiling</span> - Work in 4x4 sections</li>
+                    <li>2. <span class="highlight">Walls</span> - Cut in edges first, then roll</li>
+                    <li>3. <span class="highlight">Trim</span> - Use angled brush for precision</li>
+                    <li>4. <span class="highlight">Doors & Windows</span> - Paint panels first, then frames</li>
+                </ul>
+
+                <h3>Avoiding Common Mistakes</h3>
+                <ul>
+                    <li>Don't overload brushes or rollers</li>
+                    <li>Maintain consistent pressure</li>
+                    <li>Work quickly to maintain wet edge</li>
+                    <li>Remove tape while paint is still wet</li>
+                </ul>
+
+                <div class="tip-box">
+                    <strong>Temperature Matters:</strong> Paint between 50-85°F for optimal flow and drying.
+                </div>
+            </section>
+
+            <section id="color" class="section">
+                <h2>Color & Coverage</h2>
+                
+                <h3>Estimating Paint Quantity</h3>
+                <p>Calculate your paint needs accurately:</p>
+                <ul>
+                    <li>1 gallon covers approximately 350-400 square feet</li>
+                    <li>Measure: Length × Width = Square footage</li>
+                    <li>Subtract doors and windows (20 sq ft each)</li>
+                    <li>Add 10% extra for touch-ups</li>
+                </ul>
+
+                <h3>Understanding Paint Sheens</h3>
+                <p>Choose the right sheen for each area:</p>
+                <ul>
+                    <li><span class="highlight">Flat/Matte</span> - Ceilings, low-traffic areas</li>
+                    <li><span class="highlight">Eggshell</span> - Living rooms, bedrooms</li>
+                    <li><span class="highlight">Satin</span> - Kitchens, bathrooms, hallways</li>
+                    <li><span class="highlight">Semi-Gloss</span> - Trim, doors, cabinets</li>
+                    <li><span class="highlight">Gloss</span> - High-traffic areas, furniture</li>
+                </ul>
+
+                <h3>Color Matching & Mixing</h3>
+                <ul>
+                    <li>Test colors in different lighting conditions</li>
+                    <li>Use primer tinted close to final color</li>
+                    <li>Mix all paint in one large container for consistency</li>
+                    <li>Keep color samples for future touch-ups</li>
+                </ul>
+
+                <div class="tip-box">
+                    <strong>Color Tip:</strong> Colors appear different under various lighting - always test in the actual room first.
+                </div>
+            </section>
+
+            <section id="problems" class="section">
+                <h2>Problem Solving</h2>
+                
+                <h3>Common Issues & Solutions</h3>
+                
+                <h3>Drips & Runs</h3>
+                <ul>
+                    <li><strong>Cause:</strong> Too much paint loaded on brush/roller</li>
+                    <li><strong>Solution:</strong> Sand smooth when dry, spot prime, repaint</li>
+                    <li><strong>Prevention:</strong> Don't overload tools, maintain proper thickness</li>
+                </ul>
+
+                <h3>Brush Marks</h3>
+                <ul>
+                    <li><strong>Cause:</strong> Wrong brush type or technique</li>
+                    <li><strong>Solution:</strong> Sand lightly, use quality brush, proper technique</li>
+                    <li><strong>Prevention:</strong> Use appropriate brush for paint type</li>
+                </ul>
+
+                <h3>Uneven Coverage</h3>
+                <ul>
+                    <li><strong>Cause:</strong> Insufficient coats or poor primer</li>
+                    <li><strong>Solution:</strong> Apply additional thin coats</li>
+                    <li><strong>Prevention:</strong> Use quality primer, don't skip coats</li>
+                </ul>
+
+                <h3>Peeling Paint</h3>
+                <ul>
+                    <li><strong>Cause:</strong> Poor surface preparation or moisture</li>
+                    <li><strong>Solution:</strong> Scrape, sand, prime, repaint</li>
+                    <li><strong>Prevention:</strong> Proper prep work, address moisture issues</li>
+                </ul>
+
+                <div class="tip-box">
+                    <strong>Quick Fix:</strong> For small drips, use a dry brush to gently blend while paint is still wet.
+                </div>
+            </section>
+
+            <section id="tools" class="section">
+                <h2>Tool Care & Maintenance</h2>
+                
+                <h3>Brush Care</h3>
+                <p>Proper maintenance extends brush life significantly:</p>
+                <ul>
+                    <li><strong>During Use:</strong> Don't let paint dry on bristles</li>
+                    <li><strong>Cleaning:</strong> Use appropriate solvent (water for latex, mineral spirits for oil)</li>
+                    <li><strong>Storage:</strong> Wrap in paper, store flat or hanging</li>
+                    <li><strong>Reshaping:</strong> Comb bristles while damp to maintain shape</li>
+                </ul>
+
+                <h3>Roller Care</h3>
+                <ul>
+                    <li>Clean immediately after use</li>
+                    <li>Remove excess paint by rolling on cardboard</li>
+                    <li>Wash with warm, soapy water</li>
+                    <li>Spin dry and store upright</li>
+                </ul>
+
+                <h3>When to Replace Tools</h3>
+                <p>Know when your tools need replacement:</p>
+                <ul>
+                    <li><span class="highlight">Brushes:</span> Bristles fan out, shed excessively, or lose shape</li>
+                    <li><span class="highlight">Rollers:</span> Fabric tears, sheds lint, or becomes matted</li>
+                    <li><span class="highlight">Trays:</span> Warped, cracked, or paint buildup affects function</li>
+                </ul>
+
+                <div class="tip-box">
+                    <strong>Investment Tip:</strong> Quality brushes and rollers last longer and provide better results than cheap alternatives.
+                </div>
+            </section>
+
+            <section id="safety" class="section">
+                <h2>Safety Guidelines</h2>
+                
+                <h3>Ventilation</h3>
+                <p>Ensure adequate airflow during painting:</p>
+                <ul>
+                    <li>Open windows and doors for cross-ventilation</li>
+                    <li>Use fans to circulate air</li>
+                    <li>Avoid painting in enclosed spaces without ventilation</li>
+                    <li>Take breaks in fresh air regularly</li>
+                </ul>
+
+                <h3>Personal Protection</h3>
+                <ul>
+                    <li><span class="highlight">Eyes:</span> Safety glasses when spraying or working overhead</li>
+                    <li><span class="highlight">Skin:</span> Wear gloves and long sleeves</li>
+                    <li><span class="highlight">Respiratory:</span> Use mask for spray painting or sanding</li>
+                    <li><span class="highlight">Clothing:</span> Wear old clothes or protective coveralls</li>
+                </ul>
+
+                <h3>Ladder Safety</h3>
+                <ul>
+                    <li>Maintain 4:1 ratio (4 feet up for every 1 foot out)</li>
+                    <li>Keep three points of contact at all times</li>
+                    <li>Don't overreach - move ladder instead</li>
+                    <li>Have someone spot you on tall ladders</li>
+                </ul>
+
+                <h3>Chemical Safety</h3>
+                <ul>
+                    <li>Read and follow all product labels</li>
+                    <li>Store paints and solvents away from heat sources</li>
+                    <li>Dispose of materials according to local regulations</li>
+                    <li>Keep products away from children and pets</li>
+                </ul>
+
+                <div class="tip-box">
+                    <strong>Emergency Tip:</strong> Keep phone numbers for poison control and local emergency services readily available.
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <script>
+        // Progress bar functionality
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (scrollTop / scrollHeight) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.nav-item').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    const offsetTop = targetElement.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Update active navigation item
+        function updateActiveNav() {
+            const sections = document.querySelectorAll('.section');
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').substring(1) === current) {
+                    item.classList.add('active');
+                }
+            });
+        }
+
+        // Intersection Observer for section animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+            
+            updateActiveNav();
+        });
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Initialize active nav on page load
+        updateActiveNav();
+
+        // Add hover effects to tip boxes
+        document.querySelectorAll('.tip-box').forEach(box => {
+            box.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+                this.style.boxShadow = '0 8px 25px rgba(0,0,0,0.15)';
+            });
+            
+            box.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+            });
+        });
+
+        // Add animation to highlight elements
+        document.querySelectorAll('.highlight').forEach(highlight => {
+            highlight.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+            });
+            
+            highlight.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+    <!-- FOOTER -->
+   {% include "nav.html" %}
+  

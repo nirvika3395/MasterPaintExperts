@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response Submitted</title>
+    <link rel="stylesheet" href="{% static 'playground/css/thankyou.css' %}">
+</head>
+<body>
+    {% include "nav.html" %}
+
+    <div class="decorative-elements">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+    </div>
+
+    <div class="container">
+        <div class="checkmark"></div>
+        <h1>Response Submitted!</h1>
+        <p>Thank you for your submission. We've received your response and will review it shortly. You'll hear back from us soon.</p>
+        <a href="#" class="home-button" onclick="goHome()">Go Back to Home</a>
+    </div>
+
+    <br><br>
+
+    {% include "footer.html" %}
+
+    <script>
+        function goHome() {
+            window.location.href = '/'; // Redirect to home
+        }
+    </script>
+</body>
+</html>
